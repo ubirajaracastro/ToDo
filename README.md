@@ -1,4 +1,4 @@
-ToDo List tem o back end na pasta scr?Back e o FrontEnd na respectiva pasta frot.
+ToDo List tem o back end na pasta scr\Back e o FrontEnd na respectiva pasta Front.
 
 Verificações para subir o projeto:
 
