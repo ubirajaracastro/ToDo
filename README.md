@@ -19,7 +19,7 @@ Ajustar a string de conexao da base na seção do arquivo appsettings.Developmen
 
 Rodar a migração do EF Core para criar a base e tabela ToDo
 
-dotnet ef migrations add Initial -p ToDoListPersistencia -s ToDoListApi
+dotnet ef migrations add Initial -p ToDoListPersistencia -s ToDoListApi<br>
 dotnet ef database update -s ToDoListApi
 
 No Front ajustar se necessário a apiUrl da api no ToDoController  
