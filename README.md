@@ -1,6 +1,10 @@
 ToDo List tem o back end na pasta scr\Back e o FrontEnd na respectiva pasta Front.
 
+O backend está separadas com as camadas Api, camada service, camada de domínio e camada de persistencia.
 Verificações para subir o projeto:
+
+![image](https://github.com/user-attachments/assets/7ef427a5-cd00-4a0b-ba22-1949352c36b3)
+
 
 Ajustar a string de conexao da base na seção do arquivo appsettings.Development.json
 
