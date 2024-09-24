@@ -1,5 +1,9 @@
 ToDo List tem o back end na pasta scr\Back e o FrontEnd na respectiva pasta Front.<br<
 
+Back: NetCore 8
+Front Net Core 6
+EF Core - SQL Server 
+
 ![image](https://github.com/user-attachments/assets/52e441f6-f8bb-4876-8f8a-84fdb3a6791d)
 
 
