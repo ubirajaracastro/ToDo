@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ToDoWeb.Models.ToDo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>To Do</h2>
+<a asp-controller="ToDo" asp-action="NovaTarefa" class="btn btn-success mb-3">Criar Nova Tarefa</a>
+
+<table class="table table-bordered table-striped ">
+    <thead>
+        <tr class="bg-warning ">
+            <td>Título</td>
+            <td>Detalhe</td>
+            <td>Data</td>
+            <td>Finalizada?</td>
+            <td>Ações</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td>@item.Detalhe</td>
+                <td>@item.Data</td>
+                <td>
+                    @if (item.Finalizada)
+                    {
+                        @Html.Label("Sim")
+                    }
+                    else
+                    {
+                        @Html.Label("Não")
+                    }
+
+                </td>
+                <td>
+                    @if (!item.Finalizada)
+                    {
+                        @Html.ActionLink("Completar Tarefa", "FinalizarTarefa", new {  id = item.Id },new {@class="btn btn-primary"})
+                    }
+                    else
+                    {
+                      
+                        @Html.ActionLink("Excluir Tarefa", "DeletarTarefa", new {  id = item.Id },new {@class="btn btn-danger"})
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+﻿@model ToDoWeb.Models.ToDo
+
+@{
+    ViewData["Title"] = "NovaTarefa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>NovaTarefa</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NovaTarefa">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <label asp-for="Detalhe" class="control-label"></label>
+                <input asp-for="Detalhe" class="form-control" />
+                <span asp-validation-for="Detalhe" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div><br />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Finalizada" /> @Html.DisplayNameFor(model => model.Finalizada)
+                </label>
+            </div><br />
+            <div class="form-group">
+                <a href="@Url.Action("Index","ToDO")"
+                   class="btn btn-primary btn-lg">Cancelar</a>
+                <input type="submit" value="Salvar" class="btn btn-primary btn-lg" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
