@@ -6,6 +6,10 @@ Verificações para subir o projeto:
 ![image](https://github.com/user-attachments/assets/7ef427a5-cd00-4a0b-ba22-1949352c36b3)
 
 
+FrontEnd:
+![image](https://github.com/user-attachments/assets/7f285d40-4b50-4892-b33d-cc4c035dd7e0)
+
+
 Ajustar a string de conexao da base na seção do arquivo appsettings.Development.json
 
 {
